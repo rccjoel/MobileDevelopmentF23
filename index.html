@@ -3,39 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Responsive Web Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <title>Document</title>
 </head>
 <body>
+    
+    <header>
+        <h1>Swiper</h1>
+        <p>Randy Cantillo</p>
+    </header>
 
-    <div class="container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <form action="#" method="post">
+                    <label for="school">Name of School</label>
+                    <input type="text" id="school" name="school" required>
 
-        <header>
-            <h1>randy<span>.</span></h1>
-        </header>
+                    <label for="join-date">Joining Date</label>
+                    <input type="date" id="join-date" name="join-date" required>
 
-            <form>
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="fname">
+                    <label for="graduated">Graduated</label>
+                    <div>
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="graduated" value="yes">
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="graduated" value="no">
+                    </div>
 
-                <label for="mail">Email Address:</label>
-                <input type="email" id="mail" name="mail">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="swiper-slide">
+                <form id="contact-info" action="#" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-456-7890" oninvalid="this.setCustomValidity('Please enter a valid US phone number (e.g., 123-456-7890)')"oninput="this.setCustomValidity('')">
 
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" placeholder="Your address here!"></textarea>
+                    <label for="zipc">Postal Code</label>
+                    <input type="text" id="zipc" name="zipc" pattern="[A-Za-z]\d[A-Za-z][\s \-]?\d[A-Za-z]\d" required>
 
-                <label for="yes">Yes</label>
-                <input type="radio" id="yes" name="terms" value="yes">
-                
-                <label for="no">No</label>
-                <input type="radio" id="no" name="terms" value="no">
-                
-                <button type="submit">Submit!</button>
-            </form>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="swiper-slide">
+                <form id="card-info" action="#" method="post">
+                    <label for="cardnumber">Credit Card Number</label>
+                    <input type="text" id="cardnumber" name="cardnumber" maxlength="16" required>
 
+                    <label for="expdate">Expiration Date</label>
+                    <input type="date" id="expdate" name="expdate" required>
+
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" name="cvv" maxlength="3" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
+
+    <footer>
+        <p>Mobile Web Development - All Rights Reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

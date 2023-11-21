@@ -3,83 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The Hub - Movies and Shows</title>
 </head>
 <body>
-    
-    <header>
-        <h1>Swiper</h1>
-        <p>Randy Cantillo</p>
-    </header>
-
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <form action="#" method="post">
-                    <label for="school">Name of School</label>
-                    <input type="text" id="school" name="school" required>
-
-                    <label for="join-date">Joining Date</label>
-                    <input type="date" id="join-date" name="join-date" required>
-
-                    <label for="graduated">Graduated</label>
-                    <div>
-                        <label for="yes">Yes</label>
-                        <input type="radio" id="yes" name="graduated" value="yes">
-                        <label for="no">No</label>
-                        <input type="radio" id="no" name="graduated" value="no">
-                    </div>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-            <div class="swiper-slide">
-                <form id="contact-info" action="#" method="post">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-456-7890" oninvalid="this.setCustomValidity('Please enter a valid US phone number (e.g., 123-456-7890)')"oninput="this.setCustomValidity('')">
-
-                    <label for="zipc">Postal Code</label>
-                    <input type="text" id="zipc" name="zipc" pattern="[A-Za-z]\d[A-Za-z][\s \-]?\d[A-Za-z]\d" required>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-            <div class="swiper-slide">
-                <form id="card-info" action="#" method="post">
-                    <label for="cardnumber">Credit Card Number</label>
-                    <input type="text" id="cardnumber" name="cardnumber" maxlength="16" required>
-
-                    <label for="expdate">Expiration Date</label>
-                    <input type="date" id="expdate" name="expdate" required>
-
-                    <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" name="cvv" maxlength="3" required>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+    <nav class="navbar navbar-expand-md --hub-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">the<span class="--bs-warning-text-emphasis">Hub</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Library
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Trending</a></li>
+                  <li><a class="dropdown-item" href="#">My list</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Downloads</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Search</button>
+              </form>
+          </div>
         </div>
+    </nav>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/QzR8TD.jpg" class="d-block w-100" alt="game-of-thrones">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Game of Thrones</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nesciunt aut cupiditate in.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/bigbang.jpg" class="d-block w-100" alt="big-bang-theory">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Big Bang Theory</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nesciunt aut cupiditate in.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/suits.jpg" class="d-block w-100" alt="suits">
+            <div class="carousel-caption d-none d-md-block --dark">
+                <h5 class="--bs-dark-text-emphasis">Suits</h5>
+                <p class="--bs-dark-text-emphasis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nesciunt aut cupiditate in.</p>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-    <footer>
-        <p>Mobile Web Development - All Rights Reserved</p>
-    </footer>
+    <div class="container-fluid text-warning text-center">
+      <h3>Randy Cantillo</h3>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/bigbang.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/QzR8TD.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/suits.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/bigbang.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/bigbang.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/QzR8TD.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/suits.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/bigbang.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/bigbang.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  
+        <div class="card col-sm-12" style="width: 18rem;">
+          <img src="img/QzR8TD.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link --bs-warning" href="#item-1">About</a>
+            <a class="nav-link --bs-warning" href="#item-2">Terms</a>
+          </nav>
+        </nav>
+      </div>
+    
+      <div class="col-10">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+          <div id="item-1">
+            <h4>About</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia? Lorem, ipsum dolor sit amet consectetur 
+              adipisicing elit. Ad tenetur aliquid iure illum voluptatum laudantium adipisci! Tempore quam 
+              recusandae temporibus minus voluptatum aliquid sequi modi omnis, soluta placeat. Placeat, 
+              officia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia? Lorem, ipsum dolor sit amet consectetur 
+              adipisicing elit. Ad tenetur aliquid iure illum voluptatum laudantium adipisci! Tempore quam 
+              recusandae temporibus minus voluptatum aliquid sequi modi omnis, soluta placeat. Placeat, 
+              officia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia?</p>
+          </div>
+          <div id="item-2">
+            <h4>Terms</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia? Lorem, ipsum dolor sit amet consectetur 
+              adipisicing elit. Ad tenetur aliquid iure illum voluptatum laudantium adipisci! Tempore quam 
+              recusandae temporibus minus voluptatum aliquid sequi modi omnis, soluta placeat. Placeat, 
+              officia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia? Lorem, ipsum dolor sit amet consectetur 
+              adipisicing elit. Ad tenetur aliquid iure illum voluptatum laudantium adipisci! Tempore quam 
+              recusandae temporibus minus voluptatum aliquid sequi modi omnis, soluta placeat. Placeat, 
+              officia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur aliquid iure illum 
+              voluptatum laudantium adipisci! Tempore quam recusandae temporibus minus voluptatum aliquid 
+              sequi modi omnis, soluta placeat. Placeat, officia?</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-    <script src="js/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
